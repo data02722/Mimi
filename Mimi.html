@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimi | Premier Luxury Cat Products & Manufacturing</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom Color Config & Tailwind Extends -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mimi: {
+                            50: '#fff5f8',
+                            100: '#ffe8f0',
+                            200: '#f8ceec',
+                            300: '#e8a0bf',
+                            400: '#d46a8d',
+                            500: '#b8426c',
+                            600: '#992b52',
+                            800: '#52192e',
+                            900: '#3c2a33'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(232, 160, 191, 0.25);
+        }
+        .pink-gradient-bg {
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe8f0 50%, #f8ceec 100%);
+        }
+        .hero-pattern {
+            background-color: #fff5f8;
+            background-image: radial-gradient(#e8a0bf 0.75px, transparent 0.75px), radial-gradient(#e8a0bf 0.75px, #fff5f8 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0,15px 15px;
+            background-opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="font-sans text-mimi-900 bg-mimi-50 antialiased selection:bg-mimi-300 selection:text-mimi-900">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 glass-card transition-all duration-300 border-b border-mimi-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-mimi-400 to-mimi-200 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                    <i class="fa-solid font-bold fa-cat text-xl text-mimi-900"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-3xl font-bold tracking-tight text-mimi-900 leading-none">Mimi</span>
+                    <span class="text-[10px] uppercase tracking-widest text-mimi-500 font-semibold">Luxury Feline Atelier</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-mimi-900/80">
+                <a href="#about" class="hover:text-mimi-500 transition-colors">About Mimi</a>
+                <a href="#manufacturing" class="hover:text-mimi-500 transition-colors">Manufacturing & R&D</a>
+                <a href="#collections" class="hover:text-mimi-500 transition-colors">Product Lines</a>
+                <a href="#ceo" class="hover:text-mimi-500 transition-colors">Executive Leadership</a>
+                <a href="#calculator" class="hover:text-mimi-500 transition-colors">Wholesale Estimator</a>
+            </nav>
+
+            <!-- CTA Actions -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-mimi-900 text-white font-medium text-sm hover:bg-mimi-800 transition-all shadow-sm hover:shadow-md">
+                    Wholesale Portal
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-mimi-900 hover:bg-mimi-100 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-mimi-200 bg-white/95 px-6 py-6 space-y-4">
+            <a href="#about" class="block font-medium text-mimi-900 hover:text-mimi-500">About Mimi</a>
+            <a href="#manufacturing" class="block font-medium text-mimi-900 hover:text-mimi-500">Manufacturing & R&D</a>
+            <a href="#collections" class="block font-medium text-mimi-900 hover:text-mimi-500">Product Lines</a>
+            <a href="#ceo" class="block font-medium text-mimi-900 hover:text-mimi-500">Executive Leadership</a>
+            <a href="#calculator" class="block font-medium text-mimi-900 hover:text-mimi-500">Wholesale Estimator</a>
+            <a href="#contact" class="block text-center w-full py-3 rounded-xl bg-mimi-500 text-white font-medium">Wholesale Portal</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden hero-pattern py-20 lg:py-28 border-b border-mimi-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-mimi-100 border border-mimi-300/50 text-mimi-600 font-semibold text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-crown text-xs"></i>
+                        ISO-9001 Certified Feline Innovation Facilities
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-mimi-900 leading-[1.15]">
+                        Crafting Perfection for the <span class="italic text-mimi-500">Modern Feline</span>.
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-mimi-900/70 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Global leaders in artisanal cat furniture, veterinarian-formulated organic cuisine, smart playtech, and ergonomic feline wellness solutions.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#manufacturing" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-mimi-500 hover:bg-mimi-600 text-white font-semibold shadow-lg shadow-mimi-500/25 transition-all flex items-center justify-center gap-2">
+                            <span>Explore Manufacturing</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#ceo" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-mimi-100 text-mimi-900 font-semibold border border-mimi-300 shadow-sm transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-award text-mimi-500"></i>
+                            <span>Meet Our CEO</span>
+                        </a>
+                    </div>
+
+                    <!-- Key Stats Bar -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-mimi-200/80">
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-mimi-900">100%</div>
+                            <div class="text-xs sm:text-sm text-mimi-900/60 font-medium">Non-Toxic & Safe</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-mimi-900">42+</div>
+                            <div class="text-xs sm:text-sm text-mimi-900/60 font-medium">Patented Designs</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-mimi-900">18M+</div>
+                            <div class="text-xs sm:text-sm text-mimi-900/60 font-medium">Happy Cats Worldwide</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Showcase -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-mimi-300 to-mimi-100 rotate-3 transform scale-105 opacity-70 blur-xl"></div>
+                        <div class="relative bg-white p-6 rounded-3xl shadow-xl border border-mimi-200">
+                            <div class="aspect-square rounded-2xl bg-mimi-100 overflow-hidden relative flex items-center justify-center p-8">
+                                <img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?auto=format&fit=crop&w=800&q=80" alt="Mimi Luxury Furniture Showcase" class="object-cover w-full h-full rounded-xl shadow-md">
+                            </div>
+                            <div class="mt-4 flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-bold text-mimi-900">Le Nest Ultra-Soft Tower</h4>
+                                    <p class="text-xs text-mimi-500">Solid Beechwood & Hand-Woven Sisal</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-mimi-100 text-mimi-600 font-bold text-xs">Flagship</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT MIMI SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span class="text-mimi-500 font-bold text-sm uppercase tracking-widest">Our Heritage</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-mimi-900">Redefining Feline Living Standards</h2>
+                <p class="text-mimi-900/70 text-base sm:text-lg">At Mimi, we believe cats deserve the exact same engineering, safety, and aesthetic standards as human luxury goods. We combine sustainable forestry, pharmaceutical-grade culinary manufacturing, and ergonomic science.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-mimi-50 border border-mimi-200 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-mimi-200 flex items-center justify-center text-mimi-600 mb-6 text-xl">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3 text-mimi-900">100% Eco-Sustainable</h3>
+                    <p class="text-mimi-900/70 text-sm leading-relaxed">FSC-certified European timber, zero-VOC water-based finishes, and natural unbleached jute fibers harvested responsibly.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-mimi-50 border border-mimi-200 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-mimi-200 flex items-center justify-center text-mimi-600 mb-6 text-xl">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3 text-mimi-900">Ergonomic Science</h3>
+                    <p class="text-mimi-900/70 text-sm leading-relaxed">Every arch, cushion firmness degree, and scratch post angle is calibrated to feline spinal alignment and joint support.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-mimi-50 border border-mimi-200 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-mimi-200 flex items-center justify-center text-mimi-600 mb-6 text-xl">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3 text-mimi-900">Vet-Approved Quality</h3>
+                    <p class="text-mimi-900/70 text-sm leading-relaxed">In-house feline nutritionists and veterinary orthopedic surgeons rigorously validate all manufacturing iterations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MANUFACTURING & R&D EXCELLENCE -->
+    <section id="manufacturing" class="py-20 bg-mimi-50 border-y border-mimi-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-mimi-500 font-bold text-sm uppercase tracking-widest">Industrial Craftsmanship</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-mimi-900">Our Manufacturing Pillars</h2>
+                <p class="text-mimi-900/70">From raw material sourcing to automated clean-room processing, explore how Mimi sets the global standard for feline safety and luxury.</p>
+            </div>
+
+            <!-- Detailed Grid of Manufacturing Capabilities -->
+            <div class="grid lg:grid-cols-2 gap-8 mb-16">
+                <!-- Pillar 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-mimi-200 shadow-sm flex flex-col md:flex-row gap-6 items-start">
+                    <div class="w-16 h-16 rounded-2xl bg-mimi-100 flex-shrink-0 flex items-center justify-center text-mimi-500 text-2xl">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-serif text-xl font-bold text-mimi-900">Precision Woodworking & Scratch Posts</h3>
+                        <p class="text-sm text-mimi-900/70 leading-relaxed">
+                            We utilize sustainably harvested Nordic Beechwood and Baltic Birch. Scratching columns feature zero-VOC natural jute and high-density hand-wrapped sisal fibers, tested against high-tension clawing without shredding or chemical residue.
+                        </p>
+                        <ul class="text-xs text-mimi-600 font-semibold space-y-1">
+                            <li><i class="fa-solid fa-check text-mimi-500 mr-2"></i>Non-toxic plant adhesives</li>
+                            <li><i class="fa-solid fa-check text-mimi-500 mr-2"></i>Heavy weighted anti-topple bases</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-mimi-200 shadow-sm flex flex-col md:flex-row gap-6 items-start">
+                    <div class="w-16 h-16 rounded-2xl bg-mimi-100 flex-shrink-0 flex items-center justify-center text-mimi-500 text-2xl">
+                        <i class="fa-solid fa-bowl-food"></i>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-serif text-xl font-bold text-mimi-900">Gourmet Organic Culinary Processing</h3>
+                        <p class="text-sm text-mimi-900/70 leading-relaxed">
+                            Our human-grade processing facility utilizes sub-zero freeze-drying technology to preserve 98% of natural micronutrients. Free of synthetic preservatives, grain fillers, or artificial dyes, formulated under strict veterinary oversight.
+                        </p>
+                        <ul class="text-xs text-mimi-600 font-semibold space-y-1">
+                            <li><i class="fa-solid fa-check text-mimi-500 mr-2"></i>Human-grade protein sourcing</li>
+                            <li><i class="fa-solid fa-check text-mimi-500 mr-2"></i>Pathogen-free cleanroom freeze-drying</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-mimi-200 shadow-sm flex flex-col md:flex-row gap-6 items-start">
+                    <div class="w-16 h-16 rounded-2xl bg-mimi-100 flex-shrink-0 flex items-center justify-center text-mimi-500 text-2xl">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-serif text-xl font-bold text-mimi-900">Smart Feline Tech & IoT Systems</h3>
+                        <p class="text-sm text-mimi-900/70 leading-relaxed">
+                            Engineered with ultra-quiet brushless motors operating below 25dB. Smart water fountains feature triple-stage carbon filtration, and automated litter enclosures feature multi-point safety infrared sensors.
+                        </p>
+                        <ul class="text-xs text-mimi-600 font-semibold space-y-1">
+                            <li><i class="fa-solid fa-check text-mimi-500 mr-2"></i>Whisper-quiet acoustic dampening</li>
+                            <li><i class="fa-solid fa-check text-mimi-500 mr-2"></i>Mobile app integration & health metrics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-white p-8 rounded-3xl border border-mimi-200 shadow-sm flex flex-col md:flex-row gap-6 items-start">
+                    <div class="w-16 h-16 rounded-2xl bg-mimi-100 flex-shrink-0 flex items-center justify-center text-mimi-500 text-2xl">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-serif text-xl font-bold text-mimi-900">Luxury Textiles & Orthopedic Beds</h3>
+                        <p class="text-sm text-mimi-900/70 leading-relaxed">
+                            Hypoallergenic orthopedic memory foam cores that relieve feline joint pressure points. Wrapped in scratch-resistant velvet weaves with hidden zippers and fully machine-washable waterproof liners.
+                        </p>
+                        <ul class="text-xs text-mimi-600 font-semibold space-y-1">
+                            <li><i class="fa-solid fa-check text-mimi-500 mr-2"></i>High-rub scratch resistance rating</li>
+                            <li><i class="fa-solid fa-check text-mimi-500 mr-2"></i>OEKO-TEX Certified non-toxic fabrics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step-by-Step Quality Control Protocol Timeline -->
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border border-mimi-200 shadow-sm">
+                <h3 class="font-serif text-2xl font-bold text-center text-mimi-900 mb-10">4-Stage Quality & Assurance Protocol</h3>
+                
+                <div class="grid md:grid-cols-4 gap-6 relative">
+                    <!-- Step 1 -->
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-mimi-500 text-white font-bold flex items-center justify-center text-lg mb-4 shadow-md">1</div>
+                        <h4 class="font-bold text-mimi-900 mb-2">Raw Material Audit</h4>
+                        <p class="text-xs text-mimi-900/70">Spectrometry verification of timber non-toxicity and food protein purity testing.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-mimi-500 text-white font-bold flex items-center justify-center text-lg mb-4 shadow-md">2</div>
+                        <h4 class="font-bold text-mimi-900 mb-2">Ergonomic Testing</h4>
+                        <p class="text-xs text-mimi-900/70">Biomechanical testing to ensure natural climbing posture and optimal weight balance.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-mimi-500 text-white font-bold flex items-center justify-center text-lg mb-4 shadow-md">3</div>
+                        <h4 class="font-bold text-mimi-900 mb-2">Stress-Testing</h4>
+                        <p class="text-xs text-mimi-900/70">Simulated 10,000-cycle claw scratch tests and automated drop impact evaluations.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-mimi-500 text-white font-bold flex items-center justify-center text-lg mb-4 shadow-md">4</div>
+                        <h4 class="font-bold text-mimi-900 mb-2">White-Glove Packaging</h4>
+                        <p class="text-xs text-mimi-900/70">Vacuum-sealed, eco-friendly recyclable packaging ready for global export.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXECUTIVE LEADERSHIP / CEO SECTION -->
+    <section id="ceo" class="py-20 bg-gradient-to-b from-white to-mimi-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-mimi-200/80 shadow-xl overflow-hidden relative">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-mimi-200/30 rounded-full blur-3xl"></div>
+                
+                <div class="grid lg:grid-cols-12 gap-12 items-center relative z-10">
+                    <!-- CEO Image Frame -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative group">
+                            <!-- Golden/Pink Glow backdrop -->
+                            <div class="absolute -inset-2 bg-gradient-to-r from-mimi-300 to-mimi-500 rounded-3xl blur-md opacity-50 group-hover:opacity-75 transition duration-500"></div>
+                            
+                            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white max-w-sm bg-mimi-100">
+                                <img src="IMG_20260925_220044.jpg" alt="CEO Mimi - Founder & Chief Executive Officer" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500">
+                                
+                                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-mimi-900/90 via-mimi-900/40 to-transparent p-6 text-white">
+                                    <div class="font-serif text-2xl font-bold">CEO Mimi</div>
+                                    <div class="text-xs uppercase tracking-widest text-mimi-200 font-semibold">Chief Executive Officer & Founder</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CEO Bio & Statement -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mimi-100 text-mimi-600 font-bold text-xs uppercase tracking-wider">
+                            <i class="fa-solid fa-quote-left"></i> Executive Vision
+                        </div>
+
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-mimi-900">
+                            "If it doesn't meet my personal standards, it doesn't leave the factory."
+                        </h2>
+
+                        <p class="text-mimi-900/80 text-base leading-relaxed">
+                            Under the executive leadership of CEO Mimi, our brand has grown from a visionary design workshop into an international symbol of feline perfection. Every product line undergoes strict hands-on testing and review directed by CEO Mimi herself.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="p-4 rounded-xl bg-mimi-50 border-l-4 border-mimi-500 text-sm text-mimi-900/90 font-medium">
+                                "Our mission is simple: To eliminate poorly crafted, toxic pet plastics and elevate feline products into true architectural masterpieces that enhance feline wellbeing and domestic harmony."
+                            </div>
+                        </div>
+
+                        <!-- Highlights -->
+                        <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-mimi-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-mimi-100 text-mimi-500 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-paw"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-mimi-900">100% Quality Approval</div>
+                                    <div class="text-xs text-mimi-900/60">Inspected by CEO Mimi</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-mimi-100 text-mimi-500 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-mimi-900">Global Distribution</div>
+                                    <div class="text-xs text-mimi-900/60">Serving 45+ Countries</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT COLLECTIONS SHOWCASE -->
+    <section id="collections" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-mimi-500 font-bold text-sm uppercase tracking-widest">Catalog Overview</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-mimi-900 mt-2">Signature Collections</h2>
+                </div>
+                <div class="mt-4 md:mt-0 flex gap-2 overflow-x-auto pb-2">
+                    <button class="px-4 py-2 rounded-xl bg-mimi-500 text-white text-xs font-semibold whitespace-nowrap">All Collections</button>
+                    <button class="px-4 py-2 rounded-xl bg-mimi-50 text-mimi-900 hover:bg-mimi-100 text-xs font-semibold whitespace-nowrap">Furniture</button>
+                    <button class="px-4 py-2 rounded-xl bg-mimi-50 text-mimi-900 hover:bg-mimi-100 text-xs font-semibold whitespace-nowrap">Gourmet Treats</button>
+                    <button class="px-4 py-2 rounded-xl bg-mimi-50 text-mimi-900 hover:bg-mimi-100 text-xs font-semibold whitespace-nowrap">Smart Tech</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="group rounded-2xl bg-mimi-50 border border-mimi-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-square bg-mimi-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="Royal Velvet Lounge Bed" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-mimi-600">Orthopedic</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <h3 class="font-serif font-bold text-lg text-mimi-900">Le Palais Cushion</h3>
+                        <p class="text-xs text-mimi-900/70">Memory foam core with high-abrasion velvet cover.</p>
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-xs font-semibold text-mimi-500">Wholesale: MOQ 50 Units</span>
+                            <button onclick="openInquiryModal('Le Palais Cushion')" class="p-2 rounded-lg bg-mimi-200 hover:bg-mimi-300 text-mimi-900 transition-colors text-xs font-semibold">
+                                Inquire
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group rounded-2xl bg-mimi-50 border border-mimi-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-square bg-mimi-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&w=600&q=80" alt="Gourmet Salmon Bites" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-mimi-600">Organic</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <h3 class="font-serif font-bold text-lg text-mimi-900">Atlantic Salmon Bites</h3>
+                        <p class="text-xs text-mimi-900/70">100% Freeze-dried human grade wild salmon bites.</p>
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-xs font-semibold text-mimi-500">Wholesale: MOQ 200 Units</span>
+                            <button onclick="openInquiryModal('Atlantic Salmon Bites')" class="p-2 rounded-lg bg-mimi-200 hover:bg-mimi-300 text-mimi-900 transition-colors text-xs font-semibold">
+                                Inquire
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="group rounded-2xl bg-mimi-50 border border-mimi-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-square bg-mimi-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80" alt="Smart Hydration Oasis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-mimi-600">Smart Tech</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <h3 class="font-serif font-bold text-lg text-mimi-900">HydroPure Smart Fountain</h3>
+                        <p class="text-xs text-mimi-900/70">App-connected ultra-silent multi-filtration water hub.</p>
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-xs font-semibold text-mimi-500">Wholesale: MOQ 25 Units</span>
+                            <button onclick="openInquiryModal('HydroPure Smart Fountain')" class="p-2 rounded-lg bg-mimi-200 hover:bg-mimi-300 text-mimi-900 transition-colors text-xs font-semibold">
+                                Inquire
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="group rounded-2xl bg-mimi-50 border border-mimi-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-square bg-mimi-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=80" alt="Nordic Modular Cat Tree" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-mimi-600">Woodwork</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <h3 class="font-serif font-bold text-lg text-mimi-900">Nordic Birch Tower</h3>
+                        <p class="text-xs text-mimi-900/70">Modular, hand-wrapped sisal with heavy beech base.</p>
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-xs font-semibold text-mimi-500">Wholesale: MOQ 10 Units</span>
+                            <button onclick="openInquiryModal('Nordic Birch Tower')" class="p-2 rounded-lg bg-mimi-200 hover:bg-mimi-300 text-mimi-900 transition-colors text-xs font-semibold">
+                                Inquire
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE WHOLESALE ESTIMATOR TOOL -->
+    <section id="calculator" class="py-20 bg-mimi-50 border-t border-mimi-200/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 border border-mimi-200 shadow-xl">
+                <div class="text-center space-y-2 mb-8">
+                    <span class="text-mimi-500 font-bold text-xs uppercase tracking-widest">B2B Partner Portal</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-mimi-900">Interactive Wholesale Estimator</h2>
+                    <p class="text-xs sm:text-sm text-mimi-900/70">Calculate bulk pricing, OEM customization, and tier discounts instantly.</p>
+                </div>
+
+                <form id="wholesale-form" class="space-y-6" onsubmit="event.preventDefault(); flexCalculate();">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-mimi-900 uppercase tracking-wider mb-2">Product Category</label>
+                            <select id="calc-category" class="w-full rounded-xl border-mimi-200 bg-mimi-50 p-3 text-sm focus:ring-2 focus:ring-mimi-400 focus:outline-none" onchange="flexCalculate()">
+                                <option value="120">Luxury Furniture Towers ($120/unit)</option>
+                                <option value="15">Gourmet Organic Treats ($15/unit)</option>
+                                <option value="65">Smart Fountains & Tech ($65/unit)</option>
+                                <option value="45">Orthopedic Pet Beds ($45/unit)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-mimi-900 uppercase tracking-wider mb-2">Estimated Quantity</label>
+                            <input type="number" id="calc-qty" min="10" value="100" class="w-full rounded-xl border-mimi-200 bg-mimi-50 p-3 text-sm focus:ring-2 focus:ring-mimi-400 focus:outline-none" oninput="flexCalculate()">
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-mimi-100/60 border border-mimi-200 space-y-2">
+                        <div class="flex justify-between text-xs text-mimi-900/80">
+                            <span>Base Price per Unit:</span>
+                            <span id="calc-base" class="font-bold">$120.00</span>
+                        </div>
+                        <div class="flex justify-between text-xs text-mimi-900/80">
+                            <span>Applied Tier Discount:</span>
+                            <span id="calc-discount" class="font-bold text-mimi-600">15% Off</span>
+                        </div>
+                        <div class="border-t border-mimi-200 pt-2 flex justify-between text-sm font-bold text-mimi-900">
+                            <span>Estimated Order Total:</span>
+                            <span id="calc-total" class="text-mimi-600 text-lg">$10,200.00</span>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="openInquiryModal('Custom Bulk Quote')" class="w-full py-4 rounded-xl bg-mimi-900 text-white font-bold text-sm hover:bg-mimi-800 transition-all shadow-md">
+                        Request Formal Wholesale Proposal
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & CONTACT SECTION -->
+    <footer id="contact" class="bg-mimi-900 text-white pt-16 pb-12 border-t border-mimi-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="grid lg:grid-cols-12 gap-8">
+                <!-- Brand Info -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-mimi-400 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-cat text-xl text-mimi-900"></i>
+                        </div>
+                        <span class="font-serif text-2xl font-bold">Mimi</span>
+                    </div>
+                    <p class="text-xs text-mimi-200/70 leading-relaxed max-w-sm">
+                        Global leader in feline innovation, luxury furniture manufacturing, and organic culinary development. Guided by CEO Mimi's uncompromising vision.
+                    </p>
+                    <div class="text-xs text-mimi-200/60 space-y-1">
+                        <p><i class="fa-solid fa-location-dot mr-2"></i>Mimi Global Atelier HQ, Milan - Tokyo - London</p>
+                        <p><i class="fa-solid fa-envelope mr-2"></i>contact@mimi-feline.com</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Quick Links -->
+                <div class="lg:col-span-2 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-mimi-300">Manufacturing</h4>
+                    <ul class="text-xs space-y-2 text-mimi-200/80">
+                        <li><a href="#about" class="hover:text-white transition-colors">Our Ethos</a></li>
+                        <li><a href="#manufacturing" class="hover:text-white transition-colors">Timber Sourcing</a></li>
+                        <li><a href="#manufacturing" class="hover:text-white transition-colors">Cleanroom Processing</a></li>
+                        <li><a href="#manufacturing" class="hover:text-white transition-colors">ISO Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-mimi-300">Corporate</h4>
+                    <ul class="text-xs space-y-2 text-mimi-200/80">
+                        <li><a href="#ceo" class="hover:text-white transition-colors">CEO Leadership</a></li>
+                        <li><a href="#calculator" class="hover:text-white transition-colors">Wholesale Portal</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Investor Relations</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Form -->
+                <div class="lg:col-span-4 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-mimi-300">B2B Trade Updates</h4>
+                    <p class="text-xs text-mimi-200/70">Subscribe for executive industry reports, new collection releases, and bulk catalog updates.</p>
+                    <form class="flex gap-2" onsubmit="event.preventDefault(); showNotice('Subscribed successfully!');">
+                        <input type="email" placeholder="enter your corporate email..." required class="px-3 py-2.5 rounded-xl bg-mimi-800 text-xs text-white placeholder-mimi-300/50 focus:outline-none focus:ring-2 focus:ring-mimi-400 w-full">
+                        <button type="submit" class="px-4 py-2.5 rounded-xl bg-mimi-400 text-mimi-900 font-bold text-xs hover:bg-mimi-300 transition-colors whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-mimi-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-mimi-200/50 gap-4">
+                <p>&copy; 2026 Mimi Feline Global Enterprises. All rights reserved. Directed by CEO Mimi.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Wholesale</a>
+                    <a href="#" class="hover:text-white">Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INQUIRY MODAL (Custom Alert replacement) -->
+    <div id="inquiry-modal" class="fixed inset-0 bg-mimi-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full border border-mimi-200 shadow-2xl relative space-y-4">
+            <button onclick="closeInquiryModal()" class="absolute top-4 right-4 text-mimi-900/50 hover:text-mimi-900 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-mimi-100 text-mimi-500 flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold text-lg text-mimi-900">Wholesale Inquiry</h3>
+                    <p class="text-xs text-mimi-500" id="modal-product-title">Product Inquiry</p>
+                </div>
+            </div>
+
+            <form class="space-y-3" onsubmit="event.preventDefault(); closeInquiryModal(); showNotice('Inquiry submitted successfully to CEO Mimi\'s executive team!');">
+                <div>
+                    <label class="block text-[10px] font-bold text-mimi-900 uppercase mb-1">Company / Organization</label>
+                    <input type="text" required class="w-full p-2.5 rounded-lg border border-mimi-200 text-xs focus:ring-2 focus:ring-mimi-400 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-mimi-900 uppercase mb-1">Work Email</label>
+                    <input type="email" required class="w-full p-2.5 rounded-lg border border-mimi-200 text-xs focus:ring-2 focus:ring-mimi-400 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-mimi-900 uppercase mb-1">Estimated Annual Volume</label>
+                    <input type="text" placeholder="e.g., 500 - 1,000 units" class="w-full p-2.5 rounded-lg border border-mimi-200 text-xs focus:ring-2 focus:ring-mimi-400 focus:outline-none">
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl bg-mimi-500 text-white font-bold text-xs hover:bg-mimi-600 transition-colors shadow-md">
+                    Submit Proposal Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION TOAST -->
+    <div id="toast-notice" class="fixed bottom-6 right-6 bg-mimi-900 text-white px-5 py-3 rounded-xl text-xs font-semibold shadow-xl border border-mimi-400/30 transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-mimi-300"></i>
+        <span id="toast-message">Action completed.</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Wholesale Calculation Logic
+        function flexCalculate() {
+            const categorySelect = document.getElementById('calc-category');
+            const qtyInput = document.getElementById('calc-qty');
+            
+            const unitPrice = parseFloat(categorySelect.value);
+            let qty = parseInt(qtyInput.value) || 0;
+            if (qty < 1) qty = 1;
+
+            let discount = 0;
+            if (qty >= 500) {
+                discount = 0.30; // 30% off
+            } else if (qty >= 200) {
+                discount = 0.20; // 20% off
+            } else if (qty >= 50) {
+                discount = 0.15; // 15% off
+            } else if (qty >= 20) {
+                discount = 0.05; // 5% off
+            }
+
+            const discountedPrice = unitPrice * (1 - discount);
+            const total = qty * discountedPrice;
+
+            document.getElementById('calc-base').textContent = '$' + unitPrice.toFixed(2);
+            document.getElementById('calc-discount').textContent = (discount * 100) + '% Off';
+            document.getElementById('calc-total').textContent = '$' + total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        // Modal Handlers
+        function openInquiryModal(productName) {
+            document.getElementById('modal-product-title').textContent = productName;
+            document.getElementById('inquiry-modal').classList.remove('hidden');
+        }
+
+        function closeInquiryModal() {
+            document.getElementById('inquiry-modal').classList.add('hidden');
+        }
+
+        // Toast Notification Function
+        function showNotice(msg) {
+            const toast = document.getElementById('toast-notice');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+
+        // Initialize calculator defaults
+        flexCalculate();
+    </script>
+</body>
+</html>
